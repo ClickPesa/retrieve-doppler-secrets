@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo "$1"
-
 cd /home/ubuntu/www/v2/develop
 # Perform node_modules package installation
 yarn install
