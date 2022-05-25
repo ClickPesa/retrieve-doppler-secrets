@@ -3,9 +3,11 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: test
     steps:
-      - name: Hello world action step
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: test step
         id: hello
         uses: ./
         with:
