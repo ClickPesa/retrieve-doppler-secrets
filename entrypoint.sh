@@ -1,17 +1,9 @@
 #!/bin/sh
 
-$ chmod +x entrypoint.sh
+chmod +x entrypoint.sh
 
 echo "$1"
 
-cd /home/ubuntu/www/v2/develop
-# Perform node_modules package installation
-yarn install
-# Stop current process
-pm2 stop scripts/doppler-run.sh
+# cd /home/ubuntu/www/v2/develop
 # Configure new environment variables
-doppler configure set token $1 --scope /home/ubuntu/www/v2/develop
-# Start new process
-pm2 start scripts/doppler-run.sh --name S1
-# Clean up build archives
-rm -rf $2
+# doppler configure set token $1 --scope /home/ubuntu/www/v2/develop
