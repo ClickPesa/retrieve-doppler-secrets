@@ -10,4 +10,4 @@ jobs:
         id: hello
         uses: ./
         with:
-          SECRETS_NAME: 'Getpaid-frontend-develop'
+          DOPPLER_TOKEN: ${{secrets.DOPPLER_TOKEN}}
