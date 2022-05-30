@@ -9,5 +9,5 @@ jobs:
         id: hello
         uses: ./
         with:
-          DOPPLER_TOKEN: "test token"
+          DOPPLER_TOKEN: ${{secrets.DOPPLER_TOKEN}}
           
