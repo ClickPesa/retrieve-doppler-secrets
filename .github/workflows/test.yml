@@ -6,8 +6,11 @@ jobs:
     name: test
     steps:
       - uses: actions/checkout@v2
+      - name: build
+        run: npm install curl
       - name: test step
         id: hello
         uses: ./
         with:
           DOPPLER_TOKEN: ${{secrets.DOPPLER_TOKEN}}
+          
