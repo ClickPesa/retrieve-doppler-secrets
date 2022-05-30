@@ -10,8 +10,6 @@ jobs:
         uses: ./
         with:
           DOPPLER_TOKEN: ${{secrets.DOPPLER_TOKEN}}
-        env:
-          DOPPLER_TOKEN: ${{ secrets.env.DOPPLER_TOKEN }}
       - name: test variables
         run: |
           echo ${{ env.REACT_APP_REST_URL }}
