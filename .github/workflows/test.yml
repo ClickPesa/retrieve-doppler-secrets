@@ -12,6 +12,6 @@ jobs:
           DOPPLER_TOKEN: ${{secrets.DOPPLER_TOKEN}}
       - name: test variables
         run: |
-          echo "url ${{ env.REACT_APP_REST_URL }}"
+          echo "url ${{ env.dev.REACT_APP_REST_URL }}"
           echo "env ${{ env.DOPPLER_ENVIRONMENT }}"
           echo "env ${{ env.DOPPLER_CONFIG.REACT_APP_REST_URL }}"
