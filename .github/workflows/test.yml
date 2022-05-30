@@ -1,24 +1,10 @@
 on: [push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    name: test
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
-    steps:
-      - uses: actions/checkout@v2
-      - run: |
-          yarn
-      - run: |
-          yarn run all
   test: 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          yarn
       - name: test step
         id: hello
         uses: ./
