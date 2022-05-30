@@ -12,4 +12,4 @@ jobs:
           DOPPLER_TOKEN: ${{secrets.DOPPLER_TOKEN}}
       - name: test variables
         run: |
-          echo ${{ steps.hello.outputs.env }}
+          echo ${{ steps.hello.outputs.env.REACT_APP_REST_URL }}
