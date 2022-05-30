@@ -1,6 +1,6 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'retrieve-doppler-secrets'
+description: ''
 inputs:
   DOPPLER_TOKEN: 
     description: 'doppler token'
@@ -9,4 +9,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.SECRETS_NAME }}
+    - ${{ inputs.DOPPLER_TOKEN }}

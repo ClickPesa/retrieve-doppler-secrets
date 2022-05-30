@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "$1"
-echo "$DOPPLER_TOKEN"
+echo "token $DOPPLER_TOKEN"
 echo $DOPPLER_TOKEN
 # yarn run doppler-install && ./doppler run --token "$1"
 # doppler run -- printenv | grep DOPPLER
