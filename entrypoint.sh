@@ -3,5 +3,6 @@ echo "$1"
 yarn run doppler-install
 # Configure new environment variables
 ./doppler configure set token "$1"
-echo "$(./doppler run -- printenv DOPPLER_CONFIG)" >> $GITHUB_ENV
-# echo "::set-output name=env::$(./doppler secrets get --plain)')"
+./doppler run -- printenv | grep DOPPLER
+echo "$(./doppler secrets get REACT_APP_REST_URL --plain)"
+echo "$(./doppler run -- printenv | grep DOPPLER)" >> $GITHUB_ENV
