@@ -1,4 +1,5 @@
 #!/bin/sh
+yarn run doppler-install
 ./doppler configure set token "$1"
 ./doppler run -- printenv | grep DOPPLER
 variables=$(echo $2 | tr ", " "\n")
@@ -7,8 +8,5 @@ echo "$variables"
 for i in "${variables[@]}"
 do
    echo "$i"
-    yarn run doppler-install
-    # Configure new environment variables
-    echo "$(./doppler secrets get $i --plain)" >> $GITHUB_ENV
-    echo "$(./doppler run -- printenv | grep DOPPLER)" >> $GITHUB_ENV
+   echo "$(./doppler secrets get $i --plain)" >> $GITHUB_ENV
 done
