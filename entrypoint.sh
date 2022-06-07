@@ -11,10 +11,18 @@ variables=$(echo $2 | tr ", " "\n")
 # done
 
 # get length of an array
-arraylength=${#variables[@]}
+# arraylength=${#variables[@]}
 
-# use for loop to read all values and indexes
-for (( i=0; i<${arraylength}; i++ ));
-do
-  echo "index: $i, value: ${variables[$i]}"
-done
+# # use for loop to read all values and indexes
+# for (( i=0; i<${arraylength}; i++ ));
+# do
+#   echo "index: $i, value: ${variables[$i]}"
+# done
+
+Backup_of_internal_field_separator=$IFS
+IFS=,
+for item in $2; 
+  do
+    echo $item
+  done
+IFS=$Backup_of_internal_field_separator
