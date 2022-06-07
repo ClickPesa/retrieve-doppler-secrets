@@ -23,6 +23,6 @@ Backup_of_internal_field_separator=$IFS
 IFS=,
 for item in $2; 
   do
-    echo "$i=$(./doppler secrets get $i --plain)" >> $GITHUB_ENV
+    echo "$item=$(./doppler secrets get $item --plain)" >> $GITHUB_ENV
   done
 IFS=$Backup_of_internal_field_separator
