@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "$1"
 echo "$2"
-variables=($(echo $2 | tr "," "\n"))
+variables=$(echo $2 | tr "," "\n")
 IFS=', ' read -r -a variables <<< "$string"
 echo "$variables"
 echo "$IFS"
