@@ -8,5 +8,5 @@ echo "$variables"
 for i in "${variables[@]}"
 do
    echo "$i"
-   echo "$i=$(./doppler secrets get $i --plain)" >> $GITHUB_ENV
+#    echo "$i=$(./doppler secrets get $i --plain)" >> $GITHUB_ENV
 done
