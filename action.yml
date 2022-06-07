@@ -5,8 +5,12 @@ inputs:
   DOPPLER_TOKEN: 
     description: 'doppler token'
     required: true
+  VARIABLES:
+    required: true
+    description: "variables separated with comma"
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.DOPPLER_TOKEN }}
+    - ${{ inputs.VARIABLES }}

@@ -1,5 +1,6 @@
 #!/bin/sh
 echo "$1"
+echo "$2"
 yarn run doppler-install
 # Configure new environment variables
 ./doppler configure set token "$1"
